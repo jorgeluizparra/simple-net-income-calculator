@@ -1,8 +1,8 @@
 {
   "name": "react",
   "scripts": {
-    "start": "webpack-dev-server .",
-    "build": "Webpack .",
+    "start": "webpack-dev-server ./src",
+    "build": "Webpack ./src",
     "test": "test"
   },
   "packageManager": "yarn@3.2.2",
@@ -19,6 +19,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^26.8.3",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
     "path": "^0.12.7",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
@@ -26,7 +28,9 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.8",
+    "css-loader": "^6.7.1",
     "postcss": "^8.4.16",
+    "postcss-loader": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.1.8"

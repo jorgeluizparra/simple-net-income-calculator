@@ -1,10 +1,12 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const ENVIRONMENT = process.env.NODE_ENV;
 
 module.exports={
     mode: ENVIRONMENT ? ENVIRONMENT : "development",
-    entry: "./index.js", 
+    entry: "./src/index.js", 
     output: {
         path: path.resolve(__dirname, "public"),
         filename: "main.js"
@@ -33,7 +35,19 @@ module.exports={
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use:  'babel-loader'
-            }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                ],
+            },
         ]
-    }
+    },
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({ template: './src/index.html' })
+    ],
 }
