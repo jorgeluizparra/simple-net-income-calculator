@@ -15,15 +15,7 @@ module.exports={
         port: "3030",
         static: ["./public"],
         open: true,
-        /** "hot"
-         * enabling and disabling HMR. takes "true", "false" and "only". 
-         * "only" is used if enable Hot Module Replacement without page 
-         * refresh as a fallback in case of build failures
-         */
         hot: true ,
-        /** "liveReload"
-         * disable live reload on the browser. "hot" must be set to false for this to work
-        */
         liveReload: true
     },
     resolve: {
@@ -48,6 +40,6 @@ module.exports={
     },
     plugins: [
         new MiniCssExtractPlugin(),
-        new HtmlWebpackPlugin({ template: './src/index.html' })
+        new HtmlWebpackPlugin({ template: './public/index.html' })
     ],
 }

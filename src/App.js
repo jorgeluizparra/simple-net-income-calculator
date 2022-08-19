@@ -23,6 +23,7 @@ const App = () =>{
                 }
             })
             updateTableData(newTableData);
+            updateBannerMessage("");
         } else {
             updateBannerMessage("Error: Occurred an error during the request.");
         }
