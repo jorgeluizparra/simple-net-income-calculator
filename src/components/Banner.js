@@ -11,7 +11,7 @@ const Banner = ({ message, color, onClose }) => {
             <span className="flex p-2">
               <SpeakerphoneIcon className="h-6 w-6 text-white" aria-hidden="true" />
             </span>
-            <p className="ml-3 font-medium text-white truncate">
+            <p className="ml-3 font-medium text-white">
                 {message}
             </p>
           </div>
