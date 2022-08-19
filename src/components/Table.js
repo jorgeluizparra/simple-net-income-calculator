@@ -6,7 +6,7 @@ export default function Table({ items=[], onClose }) {
   return (
     <div className="bg-white shadow overflow-hidden sm:rounded-lg mt-5">
       <div className="px-4 py-5 sm:px-6 flex">
-        <h3 className="text-lg leading-6 font-medium text-gray-900 inline my-auto">Taxes calculation result</h3>
+        <h3 className="text-lg leading-6 font-medium text-gray-900 inline my-auto">Tax calculation result</h3>
         <div className="order-2 flex-shrink-0 sm:order-3 ml-auto">
           <button
             onClick={() => onClose()}
